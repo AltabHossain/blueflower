@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Flexes
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.flex3 {
+  flex: 3;
+}
+.flex4 {
+  flex: 4;
+}
+
+//Navbar
+a img {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #34495e;
+  text-decoration: none;
+}
+
+main-nav {
+  margin-top: 5px;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.main-nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+
+.navbar {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.icon {
+  display: none;
+}
+
+.navbar,
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 769px) {
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav a {
+    display: none;
+  }
+
+  a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 769px) {
+  .main-nav.responsive {
+    position: relative;
+    width: 100%;
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .main-nav.responsive a {
+    display: block;
+    text-align: center;
+  }
+}
+//End Navbar
+
+//header
+$text-color: #e6e7e8;
+.header {
+  position: relative;
+  background-color: #1b75bc;
+  color: $text-color;
+  height: 50vh;
+
+}
+
+h1{
+  margin-top: 0;
+}
+
+.container {
+  padding: 40px 10%;
+  @media screen and (max-width:769px){
+    padding: 40px 5%;
+  }
+}
+
+.header-text {
+  padding-top: 12%;
+  padding-left: 30%;
+}
+
+#about-1 {
+  background-color: #414042;
+  color: $text-color;
+  vertical-align: middle;
+  text-align: center;
+  height: 50vh;
+}
+
+#about-2 {
+  background: #2bb673;
+  color: $text-color;
+  .container {
+    display: flex;
+  }
+  .text {
+    padding-left: 20px;
+  }
+}
+
+//Grid setup
+.grid-item1 { grid-area: top; }
+.grid-item2 { grid-area: left; }
+.grid-item3 { grid-area: right; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'left right';
+  grid-row-gap: 5vh;
+  grid-column-gap: 25%;
+  //background-color: #2196F3;
+  padding: 10px;
+
+  > div {
+    //background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+}
+
+.image-container {
+  img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    &.student {
+      background-color: #2bb673;
+    }
+    &.teacher {
+      background-color: #1b75bc;
+    }
+  }
+}
+
+.button {
+    background-color: #2bb673;
+    border: none;
+    border-radius: 10px;
+    color: $text-color;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 150px;
+}
