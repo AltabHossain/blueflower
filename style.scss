@@ -18,6 +18,14 @@
   flex: 4;
 }
 
+.gloria {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
 //Navbar
 a img {
   display: block;
@@ -104,9 +112,21 @@ main-nav {
 $text-color: #e6e7e8;
 .header {
   position: relative;
-  background-color: #1b75bc;
+  //background-color: #1b75bc;
+  background-image: url("img/melvin-cricket-animation-2.gif");
+  //background-size: cover !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   color: $text-color;
-  height: 50vh;
+  height: 100vh;
+
+  max-width: 100%;
+  //min-height: 100%;
+  //min-width: 100%;
+  //height: auto;
+  //overflow: hidden;
+
 
 }
 
@@ -122,8 +142,9 @@ h1{
 }
 
 .header-text {
-  padding-top: 12%;
-  padding-left: 30%;
+  font-size: 40px;
+  padding-top: 5%;
+  padding-left: 1%;
 }
 
 #about-1 {
@@ -139,9 +160,14 @@ h1{
   color: $text-color;
   .container {
     display: flex;
+    flex-wrap: wrap;
   }
   .text {
     padding-left: 20px;
+  }
+  img {
+    height: auto;
+    width: 100%;
   }
 }
 
