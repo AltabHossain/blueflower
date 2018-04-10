@@ -113,20 +113,13 @@ $text-color: #e6e7e8;
 .header {
   position: relative;
   //background-color: #1b75bc;
-  background-image: url("img/melvin-cricket-animation-2.gif");
-  //background-size: cover !important;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("img/melvin-cricket-animation-3.gif");
   color: $text-color;
   height: 100vh;
-
   max-width: 100%;
-  //min-height: 100%;
-  //min-width: 100%;
-  //height: auto;
-  //overflow: hidden;
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
 }
 
@@ -166,6 +159,7 @@ h1{
     padding-left: 20px;
   }
   img {
+    padding-left: 20px;
     height: auto;
     width: 100%;
   }
@@ -183,12 +177,20 @@ h1{
     'left right';
   grid-row-gap: 5vh;
   grid-column-gap: 25%;
-  //background-color: #2196F3;
   padding: 10px;
 
   > div {
-    //background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .grid-container{
+    display: grid;
+    grid-template-areas:
+    'top'
+    'left'
+    'right'
   }
 }
 
